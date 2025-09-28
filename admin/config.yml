@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_USERNAME/YOUR_REPOSITORY_NAME # Ganti dengan repository Anda
+  repo: realbobanov/webgp # Ganti dengan repository Anda
   branch: main # atau master
 
 media_folder: "images/uploads" # Folder untuk menyimpan gambar
@@ -91,4 +91,5 @@ collections:
             widget: "list"
             fields:
               - {label: "Platform", name: "platform", widget: "string"}
+
               - {label: "URL", name: "url", widget: "string"}
