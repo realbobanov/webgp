@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerakan Pemuda GPIB Cahaya Anugerah Surabaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <div class="nav__logo">
+                    <div class="logo__triangle"></div>
+                    <div class="logo__cross">+</div>
+                </div>
+                <div class="nav__text">
+                    <span class="nav__title">GP Cahaya Anugerah</span>
+                    <span class="nav__subtitle">Berani dan Setia</span>
+                </div>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active">Beranda</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#verse" class="nav__link">Firman Hari Ini</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#profil" class="nav__link">Profil GP</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#warta" class="nav__link">Warta Pelkat</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#dokumentasi" class="nav__link">Dokumentasi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#kontak" class="nav__link">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <span class="badge">Est. 1950</span>
+                    </div>
+                    <h1 class="hero__title">Gerakan Pemuda</h1>
+                    <h2 class="hero__subtitle">GPIB Cahaya Anugerah Surabaya</h2>
+                    <p class="hero__description">
+                        Menjadi pemuda yang bergerak, melayani, dan berkarya bersama Tuhan dengan semangat <strong>Berani dan Setia</strong> dalam mengembangkan kapasitas kepemimpinan, pelayanan, dan peran sosial di gereja dan masyarakat.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#verse" class="btn btn--primary">
+                            <i class="fas fa-book-open"></i>
+                            Firman Hari Ini
+                        </a>
+                        <a href="#profil" class="btn btn--outline">Pelajari Lebih Lanjut</a>
+                    </div>
+                </div>
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__number">75</span>
+                        <span class="stat__label">Tahun Melayani</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">17-35</span>
+                        <span class="stat__label">Usia Anggota</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">6+</span>
+                        <span class="stat__label">Program Aktif</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Verse of the Day Section -->
+        <section id="verse" class="verse-section">
+            <div class="container">
+                <div class="verse__container">
+                    <div class="verse__header">
+                        <div class="verse__icon">
+                            <i class="fas fa-bible"></i>
+                        </div>
+                        <h2 class="verse__title">Firman Hari Ini</h2>
+                        <p class="verse__date" id="current-date"></p>
+                    </div>
+                    <div class="verse__content">
+                        <div class="verse__text">
+                            <blockquote class="verse__quote" id="verse-indonesian">
+                                <!-- Verse will be loaded by JavaScript -->
+                            </blockquote>
+                            <div class="verse__translation">
+                                <p class="verse__english" id="verse-english">
+                                    <!-- English translation will be loaded by JavaScript -->
+                                </p>
+                            </div>
+                            <cite class="verse__reference" id="verse-reference">
+                                <!-- Reference will be loaded by JavaScript -->
+                            </cite>
+                        </div>
+                        <div class="verse__actions">
+                            <button class="btn btn--secondary btn--sm share-btn" data-share="facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                Bagikan
+                            </button>
+                            <button class="btn btn--secondary btn--sm share-btn" data-share="whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                WhatsApp
+                            </button>
+                            <button class="btn btn--outline btn--sm" id="read-chapter-btn">
+                                <i class="fas fa-book"></i>
+                                Baca Pasal Lengkap
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profil" class="section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Profil Gerakan Pemuda</h2>
+                    <p class="section__subtitle">Mengenal lebih dalam tentang Pelayanan Kategorial Gerakan Pemuda GPIB Cahaya Anugerah</p>
+                </div>
+                <div class="profile__grid">
+                    <div class="profile__content">
+                        <div class="card">
+                            <div class="card__body">
+                                <div class="card__icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>Tentang Kami</h3>
+                                <p>Pelayanan Kategorial Gerakan Pemuda (Pelkat GP) adalah bagian dari unit misioner GPIB dengan tugas utamanya untuk membina dan melayani warga GPIB dalam kategori usia 17 – 35 tahun.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__body">
+                                <div class="card__icon">
+                                    <i class="fas fa-target"></i>
+                                </div>
+                                <h3>Misi</h3>
+                                <p>Menjadi pemuda yang bergerak, melayani, dan berkarya bersama Tuhan dengan semangat berani dan setia</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__body">
+                                <div class="card__icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h3>Visi</h3>
+                                <p>Mengembangkan kapasitas kepemimpinan, pelayanan, dan peran sosial pemuda dalam gereja dan masyarakat</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activities">
+                        <h3>Kegiatan Rutin</h3>
+                        <div class="activities__list">
+                            <div class="activity__item">
+                                <div class="activity__icon">
+                                    <i class="fas fa-pray"></i>
+                                </div>
+                                <div class="activity__content">
+                                    <strong>Ibadah Kaum Muda</strong>
+                                    <span>Setiap Jumat, 20.00 WIB</span>
+                                </div>
+                            </div>
+                            <div class="activity__item">
+                                <div class="activity__icon">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div class="activity__content">
+                                    <strong>Pendalaman Alkitab</strong>
+                                    <span>Setiap Minggu setelah ibadah</span>
+                                </div>
+                            </div>
+                            <div class="activity__item">
+                                <div class="activity__icon">
+                                    <i class="fas fa-basketball-ball"></i>
+                                </div>
+                                <div class="activity__content">
+                                    <strong>Olahraga Bersama</strong>
+                                    <span>Sabtu pagi - Futsal, Basket, Badminton</span>
+                                </div>
+                            </div>
+                            <div class="activity__item">
+                                <div class="activity__icon">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <div class="activity__content">
+                                    <strong>Pelayanan Sosial</strong>
+                                    <span>Sebulan sekali kepada masyarakat</span>
+                                </div>
+                            </div>
+                            <div class="activity__item">
+                                <div class="activity__icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div class="activity__content">
+                                    <strong>Retret Tahunan</strong>
+                                    <span>Retreat spiritual untuk memperkuat iman</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warta Section -->
+        <section id="warta" class="section section--alt">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Warta Pelkat GP</h2>
+                    <p class="section__subtitle">Berita terkini dan kegiatan Gerakan Pemuda</p>
+                </div>
+                <div class="posts__grid">
+                    <article class="post__card card">
+                        <div class="card__body">
+                            <div class="post__meta">
+                                <span class="post__date">20 September 2025</span>
+                                <span class="status status--success">Featured</span>
+                            </div>
+                            <h3 class="post__title">Retret GP 2025: 'Membangun Generasi Berani dan Setia'</h3>
+                            <p class="post__excerpt">Retret tahunan GP GPIB Cahaya Anugerah akan diselenggarakan di Puncak pada 15-17 Oktober 2025 dengan tema membangun generasi yang berani menghadapi tantangan zaman dengan tetap setia pada Firman Tuhan.</p>
+                            <div class="post__content hidden" id="post-1-content">
+                                <p>Retret tahunan merupakan agenda rutin yang sangat dinantikan oleh seluruh anggota Gerakan Pemuda. Tahun ini, tema "Membangun Generasi Berani dan Setia" dipilih untuk menguatkan identitas GP sebagai pemuda Kristen yang tidak takut bersaksi dan konsisten dalam iman.</p>
+                                <p><strong>Detail Retret:</strong></p>
+                                <ul>
+                                    <li>Tanggal: 15-17 Oktober 2025</li>
+                                    <li>Lokasi: Villa Puncak, Bogor</li>
+                                    <li>Pembicara: Pdt. Dr. Samuel Pardede dan Tim GP Sinode</li>
+                                    <li>Biaya: Rp 350.000/orang (sudah termasuk akomodasi dan konsumsi)</li>
+                                </ul>
+                                <p>Daftarkan diri Anda segera! Tempat terbatas hanya 60 peserta. Hubungi panitia untuk informasi lebih lanjut.</p>
+                            </div>
+                            <button class="btn btn--primary btn--sm toggle-content" data-target="post-1-content">Baca Selengkapnya</button>
+                        </div>
+                    </article>
+                    <article class="post__card card">
+                        <div class="card__body">
+                            <div class="post__meta">
+                                <span class="post__date">15 September 2025</span>
+                                <span class="status status--info">Pelayanan</span>
+                            </div>
+                            <h3 class="post__title">Bakti Sosial GP: Berbagi Kasih di Panti Asuhan</h3>
+                            <p class="post__excerpt">Tim GP mengunjungi Panti Asuhan Surabaya untuk berbagi berkat dan kasih Kristus kepada anak-anak yang membutuhkan.</p>
+                            <div class="post__content hidden" id="post-2-content">
+                                <p>Dalam rangka mewujudkan panggilan untuk melayani sesama, Gerakan Pemuda GPIB Cahaya Anugerah mengadakan bakti sosial rutin bulanan di Panti Asuhan Surabaya.</p>
+                                <p>Kegiatan kali ini meliputi:</p>
+                                <ul>
+                                    <li>Pembagian sembako dan perlengkapan sekolah</li>
+                                    <li>Sesi bermain dan belajar bersama anak-anak</li>
+                                    <li>Ibadah singkat dan sharing testimoni</li>
+                                    <li>Renovasi ringan fasilitas panti</li>
+                                </ul>
+                                <p>Total 25 anak dan pengurus panti merasakan berkat dari kegiatan ini. Mari terus berpartisipasi dalam pelayanan kasih!</p>
+                            </div>
+                            <button class="btn btn--primary btn--sm toggle-content" data-target="post-2-content">Baca Selengkapnya</button>
+                        </div>
+                    </article>
+                    <article class="post__card card">
+                        <div class="card__body">
+                            <div class="post__meta">
+                                <span class="post__date">10 September 2025</span>
+                                <span class="status status--warning">Olahraga</span>
+                            </div>
+                            <h3 class="post__title">Turnamen Futsal Antar Jemaat 2025</h3>
+                            <p class="post__excerpt">GP Cahaya Anugerah meraih juara 2 dalam turnamen futsal se-Surabaya yang diikuti 16 tim dari berbagai jemaat GPIB.</p>
+                            <div class="post__content hidden" id="post-3-content">
+                                <p>Prestasi membanggakan diraih tim futsal GP Cahaya Anugerah dalam Turnamen Futsal Antar Jemaat GPIB se-Surabaya yang berlangsung di GOR Lakarsantri.</p>
+                                <p><strong>Pencapaian tim:</strong></p>
+                                <ul>
+                                    <li>Juara 2 Kategori Putra</li>
+                                    <li>Top Scorer: Mikhael Situmorang (7 gol)</li>
+                                    <li>Best Player: David Tampubolon</li>
+                                </ul>
+                                <p>Turnamen ini tidak hanya mempererat persekutuan antar jemaat, tetapi juga menjadi ajang untuk menunjukkan sportivitas dan semangat fair play dalam olahraga.</p>
+                            </div>
+                            <button class="btn btn--primary btn--sm toggle-content" data-target="post-3-content">Baca Selengkapnya</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="dokumentasi" class="section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Dokumentasi & Acara Mendatang</h2>
+                    <p class="section__subtitle">Galeri kegiatan dan agenda acara Gerakan Pemuda</p>
+                </div>
+                <div class="events__grid">
+                    <div class="event__card card">
+                        <div class="card__body">
+                            <div class="event__date">
+                                <span class="event__day">15</span>
+                                <span class="event__month">Okt</span>
+                            </div>
+                            <div class="event__content">
+                                <h3 class="event__title">Retret Gerakan Pemuda 2025</h3>
+                                <div class="event__details">
+                                    <div class="event__location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Villa Puncak, Bogor</span>
+                                    </div>
+                                    <p class="event__description">Retret tahunan untuk memperkuat iman dan persekutuan dengan tema "Membangun Generasi Berani dan Setia"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event__card card">
+                        <div class="card__body">
+                            <div class="event__date">
+                                <span class="event__day">01</span>
+                                <span class="event__month">Nov</span>
+                            </div>
+                            <div class="event__content">
+                                <h3 class="event__title">Bakti Sosial GP</h3>
+                                <div class="event__details">
+                                    <div class="event__location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Panti Asuhan Surabaya</span>
+                                    </div>
+                                    <p class="event__description">Kegiatan pelayanan sosial bulanan kepada anak-anak panti asuhan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <h3>Galeri Kegiatan</h3>
+                    <div class="gallery__grid">
+                        <div class="gallery__item">
+                            <div class="gallery__placeholder">
+                                <i class="fas fa-pray"></i>
+                                <span>Ibadah Pemuda</span>
+                                <small>Dokumentasi ibadah rutin setiap Jumat</small>
+                            </div>
+                        </div>
+                        <div class="gallery__item">
+                            <div class="gallery__placeholder">
+                                <i class="fas fa-basketball-ball"></i>
+                                <span>Kegiatan Olahraga</span>
+                                <small>Turnamen dan latihan bersama</small>
+                            </div>
+                        </div>
+                        <div class="gallery__item">
+                            <div class="gallery__placeholder">
+                                <i class="fas fa-mountain"></i>
+                                <span>Retret</span>
+                                <small>Retret tahunan dan camp rohani</small>
+                            </div>
+                        </div>
+                        <div class="gallery__item">
+                            <div class="gallery__placeholder">
+                                <i class="fas fa-heart"></i>
+                                <span>Bakti Sosial</span>
+                                <small>Pelayanan kepada masyarakat</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontak" class="section section--alt">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Hubungi Kami</h2>
+                    <p class="section__subtitle">Bergabunglah dengan Gerakan Pemuda GPIB Cahaya Anugerah Surabaya</p>
+                </div>
+                <div class="contact__grid">
+                    <div class="contact__info">
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Alamat Gereja</h4>
+                                <p>Jl. Raya Wisma Lidah Kulon, Lidah Kulon, Kec. Lakarsantri, Surabaya, Jawa Timur 60213</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Telepon</h4>
+                                <p>+62-31-75203080</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>gp.cahayaanugerah@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4>Usia Anggota</h4>
+                                <p>17 - 35 tahun</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div>
+                                <h4>Ibadah Pemuda</h4>
+                                <p>Setiap Jumat, 20:00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form card" name="contact" method="POST" data-netlify="true">
+                        <div class="card__body">
+                            <h3>Kirim Pesan</h3>
+                            <div class="form-group">
+                                <label class="form-label" for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Nomor Telepon</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Pesan</label>
+                                <textarea id="message" name="message" rows="4" class="form-control" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">
+                                <i class="fas fa-paper-plane"></i>
+                                Kirim Pesan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <div class="logo__triangle"></div>
+                        <div class="logo__cross">+</div>
+                    </div>
+                    <h3>Gerakan Pemuda GPIB Cahaya Anugerah</h3>
+                    <p>Menjadi pemuda yang bergerak, melayani, dan berkarya bersama Tuhan</p>
+                    <div class="footer__motto">
+                        <strong>"Berani dan Setia"</strong>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <h4>Menu Utama</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#verse">Firman Hari Ini</a></li>
+                        <li><a href="#profil">Profil GP</a></li>
+                        <li><a href="#warta">Warta Pelkat</a></li>
+                        <li><a href="#dokumentasi">Dokumentasi</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Surabaya, Jawa Timur</p>
+                    <p><i class="fas fa-phone"></i> +62-31-75203080</p>
+                    <p><i class="fas fa-envelope"></i> gp.cahayaanugerah@gmail.com</p>
+                    <p><i class="fas fa-calendar"></i> Didirikan 15 Juli 1950</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Gerakan Pemuda GPIB Cahaya Anugerah Surabaya. Hak Cipta Dilindungi.</p>
+                <div class="footer__admin">
+                    <a href="/admin/" class="btn btn--sm btn--outline" target="_blank">Admin CMS</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
