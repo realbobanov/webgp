@@ -1,0 +1,94 @@
+backend:
+  name: github
+  repo: YOUR_USERNAME/YOUR_REPOSITORY_NAME # Ganti dengan repository Anda
+  branch: main # atau master
+
+media_folder: "images/uploads" # Folder untuk menyimpan gambar
+public_folder: "/images/uploads" # Path publik untuk gambar
+
+collections:
+  - name: "warta" # Used in routes, e.g., /admin/collections/warta
+    label: "Warta Pelkat" # Used in the UI
+    folder: "_posts/warta" # The path to the folder where files are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
+    fields: # The fields for each document
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Judul", name: "title", widget: "string"}
+      - {label: "Tanggal Publikasi", name: "date", widget: "datetime"}
+      - {label: "Gambar Utama", name: "featured_image", widget: "image", required: false}
+      - {label: "Ringkasan", name: "excerpt", widget: "text"}
+      - {label: "Isi Artikel", name: "body", widget: "markdown"}
+      - {label: "Kategori", name: "category", widget: "select", options: ["berita", "kegiatan", "pengumuman", "renungan"]}
+
+  - name: "events" # Events collection
+    label: "Kegiatan & Acara"
+    folder: "_posts/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "event"}
+      - {label: "Nama Acara", name: "title", widget: "string"}
+      - {label: "Tanggal Acara", name: "event_date", widget: "datetime"}
+      - {label: "Waktu", name: "time", widget: "string"}
+      - {label: "Lokasi", name: "location", widget: "string"}
+      - {label: "Poster/Gambar", name: "featured_image", widget: "image", required: false}
+      - {label: "Deskripsi", name: "description", widget: "text"}
+      - {label: "Detail Acara", name: "body", widget: "markdown"}
+      - {label: "Status", name: "status", widget: "select", options: ["upcoming", "ongoing", "completed"]}
+
+  - name: "dokumentasi"
+    label: "Dokumentasi"
+    folder: "_posts/dokumentasi"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "documentation"}
+      - {label: "Judul", name: "title", widget: "string"}
+      - {label: "Tanggal", name: "date", widget: "datetime"}
+      - {label: "Galeri Foto", name: "gallery", widget: "list", field: {label: "Foto", name: "image", widget: "image"}}
+      - {label: "Deskripsi", name: "description", widget: "text"}
+      - {label: "Detail", name: "body", widget: "markdown"}
+      - {label: "Kategori", name: "category", widget: "select", options: ["ibadah", "retret", "olahraga", "pelayanan", "lainnya"]}
+
+  - name: "pages"
+    label: "Halaman"
+    files:
+      - label: "Profil Gerakan Pemuda"
+        name: "profil"
+        file: "_data/profil.yml"
+        fields:
+          - {label: "Judul", name: "title", widget: "string", default: "Profil Gerakan Pemuda"}
+          - {label: "Deskripsi Singkat", name: "description", widget: "text"}
+          - {label: "Visi", name: "vision", widget: "text"}
+          - {label: "Misi", name: "mission", widget: "list", field: {label: "Poin Misi", name: "point", widget: "string"}}
+          - {label: "Sejarah", name: "history", widget: "markdown"}
+          - label: "Kegiatan Rutin"
+            name: "activities"
+            widget: "list"
+            fields:
+              - {label: "Nama Kegiatan", name: "name", widget: "string"}
+              - {label: "Jadwal", name: "schedule", widget: "string"}
+              - {label: "Deskripsi", name: "description", widget: "text"}
+          - label: "Struktur Organisasi"
+            name: "structure"
+            widget: "list"
+            fields:
+              - {label: "Jabatan", name: "position", widget: "string"}
+              - {label: "Nama", name: "name", widget: "string"}
+              - {label: "Foto", name: "photo", widget: "image", required: false}
+
+      - label: "Informasi Kontak"
+        name: "contact"
+        file: "_data/contact.yml"
+        fields:
+          - {label: "Alamat Gereja", name: "address", widget: "text"}
+          - {label: "Telepon", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Jadwal Ibadah GP", name: "service_schedule", widget: "string"}
+          - label: "Media Sosial"
+            name: "social_media"
+            widget: "list"
+            fields:
+              - {label: "Platform", name: "platform", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
